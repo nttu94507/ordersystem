@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('content');
-            $table->integer('price');
-            $table->longText('note');
+            $table->string('CommodityName');
+            $table->string('content')->nullable();
+            $table->integer('CommodityPrice');
+            $table->integer('CommodityStocks');
+            $table->longText('note')->nullable();
+            $table->integer('category')->nullable();
             $table->timestamps();
         });
     }
